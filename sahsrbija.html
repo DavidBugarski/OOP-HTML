@@ -5,6 +5,7 @@
 		<meta charset = "UTF8">
 		<title>Šah</title>
 		<link rel="stylesheet" href="sahsrbija.css">	
+		<script src="sahsrbija.js"></script>
 	</head>
 
 	<font color="black"><center><h1 style="font-family:courier;"><p style="color:white">Šah Srbija</p></h1></center></font>  
@@ -38,7 +39,14 @@
 		</main>
 
 		<center><iframe width="400" height="300" src="https://www.youtube.com/embed/w_1u1Cm3qtk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-
+		<div id="current_date"></p>
+				<script>
+					date = new Date();
+					year = date.getFullYear();
+					month = date.getMonth() + 1;
+					day = date.getDate();
+					document.getElementById("current_date").innerHTML = month + "/" + day + "/" + year;
+				</script>
 		<h3><p style="color:orange">Podržani sajtovi za igranje šaha</p></h3>
 		<center>
 			<table style="background-color:#ff9d00">
@@ -93,17 +101,46 @@
 			</tr>
 			</table>
 		</center>
+		<h6><p style="color:orange">Prijava</p></h6>
+		<form action="action_page.php" method="post">
+ 				<div class="imgcontainer">
+    					<img src="img_avatar2.png" alt="Avatar" class="avatar">
+  				</div>
 
-		<h6><p style="color:orange">Kontakt</p></h6>
+  				<div class="container">
+    					<label for="uname"><b>Username</b></label>
+    					<input type="text" placeholder="Enter Username" name="uname" required>
+
+    					<label for="psw"><b>Password</b></label>
+    					<input type="password" placeholder="Enter Password" name="psw" required>
+
+   					<button type="submit">Login</button>
+    					<label>
+      						<input type="checkbox" checked="checked" name="remember"> Remember me
+    					</label>
+  				</div>
+
+  				<div class="container" style="background-color:#f1f1f1">
+    					<button type="button" class="cancelbtn">Cancel</button>
+    					<span class="psw">Forgot <a href="#">password?</a></span>
+ 				</div>
+		</form>
+		<h7><p style="color:orange">Kontakt</p></h7>
 
 		<center><a href = "https://www.instagram.com/bugarskiii"> Instragram </a> <img src="Pictures/insta.png" alt="Instagram" style="width:15px;height:15px;"></center>
 		<center><a href = "https://www.twitter.com/daskii2508"> Twitter </a> <img src="Pictures/twitter.png" alt="Twitter" style="width:15px;height:15px;"></center>
 		<center><p style="color:white">sahsrbija@sah.srb</p></center>
-		<center><p style="color:white">000/0000-0000</p></center>
+		
+		<h8>Demo JavaScript in Head</h2>
+
+			<p id="demo">A Paragraph</p>
+			<button type="button" onclick="myFunction()">Try it</button>
+		
 
 	</section>
 
 	<footer>
+		<center><p style="color:white">000/0000-0000</p></center>
 		<center><p style="color:white">All Rights Reserved</p></center>
 	</footer>
 		
