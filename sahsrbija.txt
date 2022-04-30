@@ -10,6 +10,15 @@
 	<img src="Pictures/srbija.gif" alt="Srbija" style="width:48px;height:48px;">
 
 	<body>
+
+	<header>
+		<center><img>
+			<img src="Pictures/sah.png" alt="SahSrbija" style="width:801px;height:801px;">
+		</center></img>
+		background-colour:blue;
+	</header>
+		
+	<section>
 		<main>
 			<strong>
 				<p>
@@ -21,9 +30,7 @@
 				Ovde možete besplatno pratiti turnire i njihove rezultate. Pored toga ima i obaveštenja o igračima.
 			</p>
 
-			<center><img>
-				<img src="Pictures/sah.png" alt="SahSrbija" style="width:801px;height:801px;">
-			</center></img>
+			
 		</main>
 
 		<iframe width="1264" height="720" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -39,6 +46,12 @@
 		<center><p>sahsrbija@gmail.com</p></center>
 		<center><p>000/0000-0000</p></center>
 
+	</section>
+
+	<footer>
+		<p> test footer </p>
+	</footer>
+		
 	</body>
 
 </html>
