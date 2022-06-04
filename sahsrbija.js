@@ -17,3 +17,10 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+let span = document.getElementById('myspan');
+let text = document.getElementById('tekst');
+span.addEventListener('click', (e)=> {
+    let obj = JSON.stringify(data.d[0])
+    text.innerHTML = obj;
+})

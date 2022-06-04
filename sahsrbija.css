@@ -154,11 +154,16 @@ span.psw {
   background-color: #555; /* Add a dark-grey background on hover */
 }
 
-myDiv {
-  display: block;
-   background-color: #555;
 }
-myDiv2 {
-  display: block;
-   background-color: #555;
+
+
+.myDiv > div{
+	flex: 1;
+	margin: 10px;
+}
+.myDiv {
+  display: flex;
+}
+span{
+	color:purple;
 }

@@ -5,23 +5,45 @@
 		<meta charset = "UTF8">
 		<title>Šah</title>
 		<link rel="stylesheet" href="sahsrbija.css">
-		<script src="sahsrbija.js"></script>
+		<button onclick="topFunction()" id="myBtn" title="Go to top">Pocetak</button>
+		<style>
+			.myDiv {
+				border: 5px outset orange;
+				background-color: white;
+				text-align: center;
+			}
+		</style>
+		<style>
+			.myDiv2 {
+				border: 5px outset orange;
+				background-color: white;
+				text-align: center;
+			}
+		</style>
 	</head>
 
 	<font color="black"><center><h1 style="font-family:courier;"><p style="color:white">Šah Srbija</p></h1></center></font>
 	<img src="Pictures/pijun.png" alt="Pijun" style="width:48px;height:48px;">
 	<img src="Pictures/srbija.gif" alt="Srbija" style="width:48px;height:48px;">
+	
 
 	<body>
-
+		<center><p><font color="white">Current Date and Time is <span id='date-time'></span></font></p></center>
+		<script>
+			var dt = new Date();
+			document.getElementById('date-time').innerHTML=dt;
+		</script>
 	<div class="topnav">
-  		<a class="active" href="#home">Home</a>
-  		<a href="#about">O Nama</a>
-		<a href="#contact">Igraj!</a>
-		<a href="#contact">Komentar</a>
-		<a href="#contact">Osoblje</a>
-  		<a href="#contact">Kontakt</a>
-  		<input type="text" placeholder="Pretraži..">
+  		<a class="active" href="Dobrodosli">Dobrodosli</a>
+  		<a href="Sajtovi">Sajtovi</a>
+		<a href="Komentar">Komentar</a>
+		<a href="Osoblje">Osoblje</a>
+		<a href="Prijava">Prijava</a>
+  		<a href="Kontakt">Kontakt</a>
+		<form>
+  		<input type="text" placeholder="Pretraži...">
+		<button type="submit">🔎</button>   
+		</form>	
 	</div>
 
 	<header>
@@ -35,19 +57,11 @@
 			<h2><font color="orange">Dobrodošli na sajt Šah Srbija.</font></h2>
 			<p style="color:white">
 				Ovde možete besplatno pratiti turnire i njihove rezultate. Pored toga ima i obaveštenja o igračima.
-			</p>
-			<p>Date/Time: <span id="datetime"></span></p>
+			</p>			
 		</main>
 
 		<center><iframe width="400" height="300" src="https://www.youtube.com/embed/w_1u1Cm3qtk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-		<div id="current_date"></p>
-				<script>
-					date = new Date();
-					year = date.getFullYear();
-					month = date.getMonth() + 1;
-					day = date.getDate();
-					document.getElementById("current_date").innerHTML = month + "/" + day + "/" + year;
-				</script>
+		
 		<h3><p style="color:orange">Podržani sajtovi za igranje šaha</p></h3>
 		<center>
 			<table style="background-color:#ff9d00">
@@ -69,15 +83,33 @@
 			</tr>
 			</table>
 		</center>
+		<div class="myDiv">
+			<div style="position:relative">
+				<div style="float:left; width: 400px; height:300px; background-color:darkgray;"><h3> Branko <span id="myspan">Kljajic</span><h3>
+				</div>
+				<div style="float:left; width: 400px; height:300px; background-color:gray;"><h3><p id ="tekst">Imam slavu, al' mi ne znači (Ništa baš)
+					Još uvek sam u gasu, neću prestati (Nikada)
+					Šutirô sam komade da se prehranim (Ispred zgrade)
+					Bežô sam odavde, da se ne vratim (Idem dalje)
+					Reći će ti da sam prsô od MODE (Al')
+					Pre će biti da ću brzo do love (Ma)
+					Ja bih s tobom samo negde na more ('Aj)
+					'Ajmo u provod, tamo gde je najbolje (Da)
+					</p>
+					</h3>
+				</div>
+				<div style="float:left; width: 400px; height:300px; background-color:gold;"><h3><center><img src="Pictures/fox.jpg" alt="fox" style="width:400px;height:300px;"></center></h3>
+				</div>
+			</div>
+		</div>
 
 		<h4><p style="color:orange">Ostavi Komentar</p></h4>
 		<form action="/html/tags/html_form_tag_action.cfm" method="post">
-			<textarea name="comments" id="comments" style="width:96%;height:90px;padding:2%;font-size:1.2em;background-color:gold;">
-			...
+			<textarea name="comments" id="comments" style="width:96%;height:90px;padding:2%;font-size:1.2em;background-color:orange;">
 			</textarea>
 			<input type="submit" value="Submit">
 		</form>
-		<h5><p style="color:orange">Osoblje</p></h5>
+		<h4><p style="color:orange">Osoblje</p></h4>
 		<center>
 			<table style="background-color:#ff9d00">
 			<tr>
@@ -102,50 +134,49 @@
 			</tr>
 			</table>
 		</center>
-		<h6><p style="color:orange">Prijava</p></h6>
+		
+		<p id="demo"></p>
+		<script>
+			document.getElementById("zaposleni").innerHTML =
+			obj.zaposleni[1].ime + " " + obj.zaposleni[1].prezime;
+		</script>
+		
+		<h4><p style="color:orange">Prijava</p></h4>
 		<form action="action_page.php" method="post">
  				<div class="imgcontainer">
     					<img src="img_avatar2.png" alt="Avatar" class="avatar">
   				</div>
 
   				<div class="container">
-    					<label for="uname"><b>Username</b></label>
+    					<label for="uname"><b>Korsisnicko Ime</b></label>
     					<input type="text" placeholder="Enter Username" name="uname" required>
 
-    					<label for="psw"><b>Password</b></label>
+    					<label for="psw"><b>Lozinka</b></label>
     					<input type="password" placeholder="Enter Password" name="psw" required>
 
    					<button type="submit">Login</button>
     					<label>
-      						<input type="checkbox" checked="checked" name="remember"> Remember me
+      						<input type="checkbox" checked="checked" name="remember"> Zapamti me
     					</label>
   				</div>
 
   				<div class="container" style="background-color:#f1f1f1">
-    					<button type="button" class="cancelbtn">Cancel</button>
-    					<span class="psw">Forgot <a href="#">password?</a></span>
+    					<button type="button" class="cancelbtn">Obustavi</button>
+    					<span class="psw">Zaboravljena <a href="#">sifra?</a></span>
  				</div>
-		</form>
-		<h7><p style="color:orange">Kontakt</p></h7>
-
-		<center><a href = "https://www.instagram.com/bugarskiii"> Instragram </a> <img src="Pictures/insta.png" alt="Instagram" style="width:15px;height:15px;"></center>
-		<center><a href = "https://www.twitter.com/daskii2508"> Twitter </a> <img src="Pictures/twitter.png" alt="Twitter" style="width:15px;height:15px;"></center>
-		<center><p style="color:white">sahsrbija@sah.srb</p></center>
-
-		<h8>Demo JavaScript in Head</h2>
-
-			<p id="demo">A Paragraph</p>
-			<button type="button" onclick="myFunction()">Try it</button>
-
-
+		</form>		
 	</section>
 
 	<footer>
+		<h4><p style="color:orange">Kontakt</p></h4>
+		<center><a href = "https://www.instagram.com/bugarskiii"> Instragram </a> <img src="Pictures/insta.png" alt="Instagram" style="width:15px;height:15px;"></center>
+		<center><a href = "https://www.twitter.com/daskii2508"> Twitter </a> <img src="Pictures/twitter.png" alt="Twitter" style="width:15px;height:15px;"></center>
+		<center><p style="color:white">sahsrbija@sah.srb</p></center>
 		<center><p style="color:white">000/0000-0000</p></center>
 		<center><p style="color:white">All Rights Reserved</p></center>
+		<script src="sahsrbija.js"></script> 
 	</footer>
-
 	</body>
-
 </html>
-<script src="sahsrbija.js"</script>
+
+
